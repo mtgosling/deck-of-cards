@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    max-width: 1440px;
+    margin: 0 auto 20px;
+}
+
+.controls {
+    max-width: 315px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.btn {
+    height: 40px;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: 700;
+
+    &.disabled {
+        background-color: rgba(0,0,0, 0.6);
+        font-weight: 400;
+    }
+}
