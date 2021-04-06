@@ -2,6 +2,7 @@ import '../styles/card.scss';
 
 const Card = ({ card, flipped }) => {
     const imgPath = flipped ? 'cards/back.png' : `cards/${ card.value }_of_${ card.suit }.png`;
+    // This uses stock playing card images made available by google, you can find them in public/cards
 
     return (
         <div className="card-wrapper">
@@ -11,7 +12,6 @@ const Card = ({ card, flipped }) => {
                 </div>
             </div>
         </div>
-
     )
 }
 

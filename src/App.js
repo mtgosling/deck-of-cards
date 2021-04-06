@@ -1,9 +1,10 @@
 import './App.scss';
+import Header from "./components/Header";
 import Deck from "./components/Deck";
 import Hand from "./components/Hand";
 import { useState, useEffect } from 'react';
 
-function App() {
+const App = () => {
     const [deck, setDeck] = useState([]);
     const [hand, setHand] = useState([]);
     const [flipped, setFlipped] = useState(true);
@@ -103,38 +104,11 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Deck of Cards</h1>
-            <h3>Martyn Taylor Gosling</h3>
-            <div className="controls">
-                <button
-                    onClick={shuffleDeck}
-                    disabled={deck.length < 52} // disables the shuffle feature when the deck is not complete
-                    className={`btn ${deck.length < 52 ? 'disabled': ''}`}
-                >
-                    Shuffle the Deck
-                </button>
-                <button
-                    onClick={dealCard}
-                    disabled={!deck.length} // disables Deal a Card when the deck is empty
-                    className={`btn ${!deck.length ? 'disabled': ''}`}
-                >
-                    Deal a Card
-                </button>
-                <button
-                    onClick={reset}
-                    className="btn"
-                >
-                    Reset the Deck
-                </button>
-                <button
-                    onClick={flipCards}
-                    className="btn"
-                >
-                    {flippedText}
-                </button>
+            <Header reset={reset} flipCards={flipCards} flippedText={flippedText} />
+            <div className="deck-wrapper">
+                <Hand hand={hand} dealCard={dealCard}/>
+                <Deck deck={deck} flipped={flipped} shuffleDeck={shuffleDeck}/>
             </div>
-            <Hand hand={hand} />
-            <Deck deck={deck} flipped={flipped} />
         </div>
     );
 }

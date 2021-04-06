@@ -1,0 +1,16 @@
+.header {
+    &-title {
+        font-size: 20px;
+    }
+
+    &-author {
+        font-size: 14px;
+    }
+
+    .controls {
+        max-width: 325px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}

@@ -4,14 +4,6 @@
     margin: 0 auto 20px;
 }
 
-.controls {
-    max-width: 315px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-
 .btn {
     height: 40px;
     text-transform: uppercase;
@@ -28,5 +20,21 @@
     &.disabled {
         background-color: rgba(0,0,0, 0.6);
         font-weight: 400;
+        border-color: transparent;
+        cursor: not-allowed;
+    }
+}
+
+//generic section header styles, used in both the hand and deck
+.header-info,
+.header-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .btn {
+        margin-bottom: 0;
     }
 }

@@ -1,1 +1,10 @@
-// placeholder for card list styling
+.card-list {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
