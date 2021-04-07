@@ -1,5 +1,6 @@
 import CardList from "./CardList";
 import '../styles/deck.scss';
+import Button from "react-bootstrap/Button";
 
 const Deck = ({ deck, flipped, shuffleDeck }) => {
     return (
@@ -10,13 +11,13 @@ const Deck = ({ deck, flipped, shuffleDeck }) => {
                     <span>Cards in deck: {deck.length}</span>
                 </div>
                 <div className="header-controls">
-                    <button
+                    <Button
                         disabled={deck.length < 52} // disables the shuffle feature when the deck is not complete
-                        className={`btn btn-primary ${deck.length < 52 ? 'disabled': ''}`}
+                        variant={'primary'}
                         onClick={shuffleDeck}
                     >
                         Shuffle the deck
-                    </button>
+                    </Button>
                 </div>
             </div>
 
