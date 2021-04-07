@@ -12,7 +12,7 @@ const Deck = ({ deck, flipped, shuffleDeck }) => {
                 <div className="header-controls">
                     <button
                         disabled={deck.length < 52} // disables the shuffle feature when the deck is not complete
-                        className={`btn ${deck.length < 52 ? 'disabled': ''}`}
+                        className={`btn btn-primary ${deck.length < 52 ? 'disabled': ''}`}
                         onClick={shuffleDeck}
                     >
                         Shuffle the deck

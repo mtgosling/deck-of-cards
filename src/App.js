@@ -105,7 +105,7 @@ const App = () => {
     return (
         <div className="App">
             <Header reset={reset} flipCards={flipCards} flippedText={flippedText} />
-            <div className="deck-wrapper">
+            <div className="deck-wrapper container">
                 <Hand hand={hand} dealCard={dealCard}/>
                 <Deck deck={deck} flipped={flipped} shuffleDeck={shuffleDeck}/>
             </div>

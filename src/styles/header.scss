@@ -1,10 +1,13 @@
 .header {
     &-title {
         font-size: 20px;
+        margin: 25px 0;
+        font-weight: 700;
     }
 
     &-author {
         font-size: 14px;
+        margin-bottom: 25px;
     }
 
     .controls {
