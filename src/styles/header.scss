@@ -11,9 +11,13 @@
     }
 
     .controls {
-        max-width: 325px;
+        max-width: 500px;
         display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
+        justify-content: center;
+        margin: 0 auto 15px;
+
+        button {
+            margin: 10px 5px;
+        }
     }
 }

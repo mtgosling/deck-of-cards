@@ -8,7 +8,7 @@ const App = () => {
     const [deck, setDeck] = useState([]);
     const [hand, setHand] = useState([]);
     const [flipped, setFlipped] = useState(true);
-    const [flippedText, setFlippedText] = useState('Reveal Deck')
+    const [flippedText, setFlippedText] = useState('Reveal Deck');
     const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
     const values = ['2','3','4','5','6','7','8','9','10','jack','queen','king','ace']
 
