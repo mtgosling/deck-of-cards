@@ -1,5 +1,6 @@
 import CardList from "./CardList";
 import '../styles/hand.scss';
+import Alert from 'react-bootstrap/Alert';
 
 const Hand = ({ hand, dealCard }) => {
     return (
@@ -20,7 +21,9 @@ const Hand = ({ hand, dealCard }) => {
                 </div>
             </div>
 
-            <p className={`${hand.length ? 'hidden' : 'visible' }`}>Your hand is empty, draw a card!</p>
+            <Alert variant={'warning'} className={`hand-alert ${hand.length ? 'hidden' : 'visible' }`}>
+                Your hand is empty, draw a card!
+            </Alert>
             <span className={`${!hand.length ? 'hidden' : 'visible' }`}>
                 <CardList cards={hand} />
             </span>
